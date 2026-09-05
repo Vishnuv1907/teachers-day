@@ -1,0 +1,785 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Georgia", serif;
+    background: #fff7fb;
+    color: #54213b;
+    overflow-x: hidden;
+}
+
+
+/* ================= SCREENS ================= */
+
+.screen {
+    min-height: 100vh;
+    width: 100%;
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    position: relative;
+
+    animation: fadeIn 0.8s ease;
+}
+
+.screen.active {
+    display: flex;
+}
+
+
+/* ================= OPENING ================= */
+
+#home {
+    background:
+        radial-gradient(circle at top left, #ffd8e8, transparent 35%),
+        radial-gradient(circle at bottom right, #e7d5ff, transparent 35%),
+        #fff7fb;
+}
+
+.hero {
+    text-align: center;
+    max-width: 700px;
+    padding: 40px;
+}
+
+.flower {
+    font-size: 70px;
+    animation: floating 3s ease-in-out infinite;
+}
+
+.small-title {
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: #a55778;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 80px);
+    color: #8e315d;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 30px;
+    color: #b45c82;
+    margin-bottom: 25px;
+}
+
+.intro {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #70435a;
+    margin-bottom: 35px;
+}
+
+
+/* ================= BUTTON ================= */
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+
+    background: linear-gradient(
+        135deg,
+        #c85b89,
+        #8d3d67
+    );
+
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    box-shadow:
+        0 8px 20px rgba(120, 40, 80, 0.25);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.03);
+
+    box-shadow:
+        0 12px 25px rgba(120, 40, 80, 0.35);
+}
+
+.surprise-btn {
+    font-size: 19px;
+    padding: 17px 35px;
+}
+
+
+/* ================= GIFTS ================= */
+
+#gifts {
+    background:
+        linear-gradient(
+            135deg,
+            #fff1f7,
+            #f8edff
+        );
+}
+
+.gift-container {
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: clamp(35px, 6vw, 55px);
+    color: #8e315d;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #85566d;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.gifts {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    flex-wrap: wrap;
+}
+
+
+/* ================= GIFT CARD ================= */
+
+.gift-card {
+    width: 250px;
+    padding: 30px 20px;
+
+    background: rgba(255,255,255,0.7);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(130, 60, 100, 0.15);
+
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+.gift-card:hover {
+    transform: translateY(-15px);
+
+    box-shadow:
+        0 25px 50px rgba(130, 60, 100, 0.25);
+}
+
+.gift-card h3 {
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.gift-card p {
+    margin-top: 8px;
+    color: #916278;
+}
+
+
+/* ================= GIFT BOX ================= */
+
+.gift-box {
+    width: 130px;
+    height: 120px;
+
+    margin: auto;
+
+    position: relative;
+
+    transition: 0.5s;
+}
+
+.gift-card:hover .gift-box {
+    transform: translateY(-10px) rotate(-3deg);
+}
+
+.gift-body {
+    position: absolute;
+
+    width: 110px;
+    height: 80px;
+
+    left: 10px;
+    top: 35px;
+
+    background: linear-gradient(
+        135deg,
+        #db6d9b,
+        #a73569
+    );
+
+    border-radius: 5px;
+}
+
+.gift-lid {
+    position: absolute;
+
+    width: 130px;
+    height: 30px;
+
+    left: 0;
+    top: 15px;
+
+    background: #c84f82;
+
+    border-radius: 7px;
+
+    z-index: 2;
+}
+
+.ribbon-v {
+    position: absolute;
+
+    width: 20px;
+    height: 105px;
+
+    background: #ffd166;
+
+    left: 55px;
+    top: 20px;
+
+    z-index: 3;
+}
+
+.ribbon-h {
+    position: absolute;
+
+    width: 130px;
+    height: 12px;
+
+    background: #ffd166;
+
+    left: 0;
+    top: 55px;
+
+    z-index: 3;
+}
+
+
+/* ================= GIFT PAGES ================= */
+
+.gift-page {
+    background:
+        radial-gradient(
+            circle at top right,
+            #ffe1ed,
+            transparent 35%
+        ),
+        #fff8fc;
+}
+
+.content-box {
+    width: 100%;
+    max-width: 750px;
+
+    background: rgba(255,255,255,0.9);
+
+    border-radius: 30px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px rgba(110,40,80,0.15);
+}
+
+.gift-number {
+    display: inline-block;
+
+    background: #ffe2ee;
+
+    color: #a33f6c;
+
+    padding: 8px 18px;
+
+    border-radius: 20px;
+
+    margin-bottom: 15px;
+}
+
+.content-box h1 {
+    font-size: 42px;
+    color: #8e315d;
+
+    margin-bottom: 25px;
+}
+
+.content-box > p {
+    font-size: 18px;
+    line-height: 1.8;
+
+    margin: 20px 0 30px;
+}
+
+
+/* ================= IMAGES ================= */
+
+.image-container,
+.drawing-container {
+
+    width: 100%;
+    max-width: 550px;
+
+    margin: auto;
+
+    padding: 12px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(90,40,70,0.2);
+
+    overflow: hidden;
+}
+
+.image-container img,
+.drawing-container img {
+
+    width: 100%;
+
+    display: block;
+
+    border-radius: 12px;
+
+    transition: 0.5s;
+}
+
+.image-container img:hover,
+.drawing-container img:hover {
+    transform: scale(1.03);
+}
+
+.drawing-container {
+    max-width: 450px;
+}
+
+.caption {
+    font-size: 22px !important;
+    color: #a03d6a;
+    font-weight: bold;
+}
+
+
+/* ================= NAMES ================= */
+
+.names {
+    margin: 25px 0;
+
+    padding: 20px;
+
+    border-top: 1px solid #f0cddd;
+    border-bottom: 1px solid #f0cddd;
+}
+
+.names h3 {
+    font-size: 26px;
+    margin: 10px;
+}
+
+
+/* ================= LETTER ================= */
+
+.letter-container {
+    text-align: center;
+}
+
+.envelope {
+    width: 280px;
+    height: 190px;
+
+    background: #d96796;
+
+    margin: auto;
+
+    position: relative;
+
+    cursor: pointer;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 20px 40px rgba(100,30,70,0.25);
+
+    transition: 0.4s;
+}
+
+.envelope:hover {
+    transform: translateY(-8px);
+}
+
+.envelope-top {
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-top: 100px solid #f08ab1;
+
+    top: 0;
+    left: 0;
+
+    z-index: 2;
+}
+
+.letter-preview {
+    position: absolute;
+
+    background: #fffaf0;
+
+    width: 220px;
+    height: 150px;
+
+    left: 30px;
+    top: 20px;
+
+    border-radius: 5px;
+
+    padding-top: 45px;
+
+    font-size: 35px;
+
+    color: #8e315d;
+}
+
+.letter-preview span {
+    font-size: 16px;
+}
+
+.click-text {
+    margin-top: 25px;
+    font-size: 18px;
+    color: #8c5570;
+}
+
+
+/* ================= ACTUAL LETTER ================= */
+
+.letter {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(55, 20, 40, 0.65);
+
+    z-index: 100;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.letter.show {
+    display: flex;
+}
+
+.letter-content {
+
+    width: 100%;
+    max-width: 700px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.95),
+            rgba(255,249,238,0.98)
+        );
+
+    padding: 45px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.3);
+
+    text-align: center;
+
+    animation: letterOpen 0.7s ease;
+}
+
+.letter-flower {
+    font-size: 50px;
+}
+
+.letter-content h1 {
+    color: #8e315d;
+
+    margin: 15px 0 25px;
+}
+
+.letter-content p {
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+
+    color: #604254;
+}
+
+.letter-content h2 {
+    color: #a03d6a;
+
+    line-height: 1.5;
+
+    margin: 30px 0;
+}
+
+.signature {
+    margin-top: 35px;
+}
+
+.close-letter {
+    position: fixed;
+
+    right: 25px;
+    top: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+}
+
+
+/* ================= FINAL ================= */
+
+#final {
+    background:
+        radial-gradient(
+            circle at center,
+            #ffe3ef,
+            #f8edff
+        );
+}
+
+.final-content {
+    text-align: center;
+    max-width: 650px;
+}
+
+.big-heart {
+    font-size: 100px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+.final-content h1 {
+    font-size: 60px;
+
+    color: #8e315d;
+
+    margin: 15px 0;
+}
+
+.final-content h2 {
+    color: #b05078;
+
+    margin-bottom: 25px;
+}
+
+.final-content p {
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+.final-message {
+    color: #8e315d;
+}
+
+
+/* ================= BACK BUTTON ================= */
+
+.back-btn {
+    margin-top: 45px;
+}
+
+.letter-back {
+    position: absolute;
+    bottom: 30px;
+}
+
+
+/* ================= PETALS ================= */
+
+.petal {
+    position: fixed;
+
+    top: -30px;
+
+    font-size: 20px;
+
+    pointer-events: none;
+
+    z-index: 50;
+
+    animation: fall linear forwards;
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes floating {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+@keyframes letterOpen {
+
+    from {
+        opacity: 0;
+        transform: scale(0.7) translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+}
+
+@keyframes fall {
+
+    from {
+        transform:
+            translateY(-30px)
+            rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .screen {
+        padding: 20px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+    .gifts {
+        gap: 20px;
+    }
+
+    .gift-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .content-box {
+        padding: 25px 18px;
+    }
+
+    .content-box h1 {
+        font-size: 32px;
+    }
+
+    .letter-content {
+        padding: 30px 20px;
+    }
+
+    .letter-content p {
+        font-size: 16px;
+    }
+
+    .final-content h1 {
+        font-size: 45px;
+    }
+
+}

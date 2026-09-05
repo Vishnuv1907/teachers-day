@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Teacher's Day | S. Renuga Ma'am</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating Petals -->
+    <div class="petals"></div>
+
+    <!-- ================= OPENING SCREEN ================= -->
+
+    <section id="home" class="screen active">
+
+        <div class="hero">
+
+            <div class="flower">🌸</div>
+
+            <p class="small-title">A Special Surprise For</p>
+
+            <h1>Happy Teacher's Day!</h1>
+
+            <h2>S. Renuga Ma'am ❤️</h2>
+
+            <p class="intro">
+                To the wonderful teacher who inspires,
+                guides and believes in us.
+            </p>
+
+            <button class="surprise-btn" onclick="showGifts()">
+                🎁 Open Your Surprise
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GIFTS SCREEN ================= -->
+
+    <section id="gifts" class="screen">
+
+        <div class="gift-container">
+
+            <h1 class="section-title">
+                Three Little Gifts For You 💝
+            </h1>
+
+            <p class="subtitle">
+                Each gift holds a little piece of our gratitude.
+            </p>
+
+
+            <div class="gifts">
+
+                <!-- GIFT 1 -->
+
+                <div class="gift-card" onclick="openGift(1)">
+
+                    <div class="gift-box">
+                        <div class="gift-lid"></div>
+                        <div class="gift-body"></div>
+                        <div class="ribbon-v"></div>
+                        <div class="ribbon-h"></div>
+                    </div>
+
+                    <h3>Gift 1</h3>
+                    <p>Our Class ❤️</p>
+
+                </div>
+
+
+                <!-- GIFT 2 -->
+
+                <div class="gift-card" onclick="openGift(2)">
+
+                    <div class="gift-box">
+                        <div class="gift-lid"></div>
+                        <div class="gift-body"></div>
+                        <div class="ribbon-v"></div>
+                        <div class="ribbon-h"></div>
+                    </div>
+
+                    <h3>Gift 2</h3>
+                    <p>A Little Portrait 🎨</p>
+
+                </div>
+
+
+                <!-- GIFT 3 -->
+
+                <div class="gift-card" onclick="openGift(3)">
+
+                    <div class="gift-box">
+                        <div class="gift-lid"></div>
+                        <div class="gift-body"></div>
+                        <div class="ribbon-v"></div>
+                        <div class="ribbon-h"></div>
+                    </div>
+
+                    <h3>Gift 3</h3>
+                    <p>A Message For You 💌</p>
+
+                </div>
+
+            </div>
+
+            <button class="back-btn" onclick="goHome()">
+                ← Back
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GIFT 1 ================= -->
+
+    <section id="gift1" class="screen gift-page">
+
+        <div class="content-box">
+
+            <span class="gift-number">🎁 Gift 1</span>
+
+            <h1>Our Wonderful Class</h1>
+
+            <div class="image-container">
+
+                <!-- CHANGE THIS IMAGE -->
+                <img src="class.png"
+                     alt="II MCA C - S. Renuga Ma'am">
+
+            </div>
+
+            <p class="caption">
+                II MCA – C ❤️
+            </p>
+
+            <p>
+                A classroom becomes special because of the teacher
+                who fills it with knowledge, kindness and memories.
+            </p>
+
+            <button onclick="showGifts()">
+                ← Back to Gifts
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GIFT 2 ================= -->
+
+    <section id="gift2" class="screen gift-page">
+
+        <div class="content-box">
+
+            <span class="gift-number">🎁 Gift 2</span>
+
+            <h1>A Portrait For You 🎨</h1>
+
+            <div class="drawing-container">
+
+                <!-- CHANGE THIS IMAGE -->
+                <img src="drawing.jpg"
+                     alt="S. Renuga Ma'am">
+
+            </div>
+
+            <p class="caption">
+                A portrait made with memories ❤️
+            </p>
+
+            <div class="names">
+
+                <p>With love from</p>
+
+                <h3>II MCA – C</h3>
+
+                <p>
+                    ✨ Your Rep ✨
+                </p>
+
+            </div>
+
+            <button onclick="showGifts()">
+                ← Back to Gifts
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GIFT 3 ================= -->
+
+    <section id="gift3" class="screen gift-page">
+
+        <div class="letter-container">
+
+            <div class="envelope" onclick="openLetter()">
+
+                <div class="envelope-top"></div>
+
+                <div class="letter-preview">
+                    💌
+                    <br>
+                    <span>For Ma'am</span>
+                </div>
+
+            </div>
+
+            <p class="click-text">
+                Tap the envelope to open your message ❤️
+            </p>
+
+        </div>
+
+
+        <!-- LETTER -->
+
+        <div id="letter" class="letter">
+
+            <button class="close-letter" onclick="closeLetter()">
+                ×
+            </button>
+
+            <div class="letter-content">
+
+                <div class="letter-flower">
+                    🌷
+                </div>
+
+                <h1>Dear Ma'am, ❤️</h1>
+
+                <p>
+                    There may be many favourite teachers
+                    in a student's life like wise u will be 
+                    my favourite teacher for sure.
+                    Favourite teachers ku list pota neenga top layum top la
+                    irupinga mam.
+                </p>
+
+                <p>
+                    I m not sure about doing phd , if i got a chance 
+                    to become a teacher definitely i would like to be a
+                    teacher like u mam.
+                </p>
+
+                <p>
+                    Namba ellar mind layum teacher na oru visual and character
+                    irukkum mam like indha mari dhan oru teacher irukanum nu 
+                    and i think there is no more visuals after see u.
+                    Neenga andha visuals oda real time example ah irukinga mam.
+                </p>
+
+                 <p>
+                    There may be many ups and downs in the life mam
+                    But keep smiling and always be happy mam.
+                </p>
+
+                <h2>
+                    Happy Teacher's Day,
+                    <br>
+                    S. Renuga Ma'am! 🌷
+                </h2>
+
+                <p class="signature">
+                    With lots of love and gratitude,<br>
+                    <b>Your Rep – II MCA C ❤️</b>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button class="back-btn letter-back"
+                onclick="showGifts()">
+            ← Back to Gifts
+        </button>
+
+    </section>
+
+
+    <!-- ================= FINAL SCREEN ================= -->
+
+    <section id="final" class="screen">
+
+        <div class="final-content">
+
+            <div class="big-heart">
+                ❤️
+            </div>
+
+            <h1>Thank You, Ma'am!</h1>
+
+            <h2>S. Renuga Ma'am 🌷</h2>
+
+            <p>
+                For teaching us,
+                inspiring us,
+                and believing in us.
+            </p>
+
+            <p class="final-message">
+                You will always be one of the special
+                teachers we remember. ❤️
+            </p>
+
+            <button onclick="showGifts()">
+                🎁 See The Gifts Again
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
